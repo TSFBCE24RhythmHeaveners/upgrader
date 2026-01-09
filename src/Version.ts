@@ -1,14 +1,15 @@
 /* eslint-disable quote-props */
 const Versions = {
-	'1.16.5': [6,  '1.16.3—1.16.5'],
-	'1.17.1': [7,  '1.17—1.17.1'],
-	'21w44a': [8,  '21w44a'],
-	'1.18.1': [8,  '1.18—1.18.1'],
-	'1.18.2': [9,  '1.18.2'],
-	'1.19':   [10, '1.19—1.19.2'],
-	'1.19.3': [10, '1.19.3'],
-	'1.19.4': [12, '1.19.4'],
-	'1.20':   [15, '1.20'],
+	'1.16.5':  [6,  '1.16.3—1.16.5'],
+	'1.17.1':  [7,  '1.17—1.17.1'],
+	'21w44a':  [8,  '21w44a'],
+	'1.18.1':  [8,  '1.18—1.18.1'],
+	'1.18.2':  [9,  '1.18.2'],
+	'1.19':    [10, '1.19—1.19.2'],
+	'1.19.3':  [10, '1.19.3'],
+	'1.19.4':  [12, '1.19.4'],
+	'1.20':    [15, '1.20'],
+	'1.21.11': [94.1, '1.21.11'],
 } satisfies Record<string, [number, string]>;
 
 export type Version = keyof typeof Versions
@@ -45,7 +46,7 @@ export namespace Version {
 	}
 
 	export function isWorkInProgress(_source: Version, _target: Version) {
-		return _target === '1.20'
+		return _target === '1.21.11'
 	}
 
 	export function autoDetect(packFormat: number): Version | undefined {
